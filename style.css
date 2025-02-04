@@ -33,9 +33,11 @@
         color: #ff6600 !important;
     }
     
+    #content {
+        padding-bottom: 80px;
+    }
+    
     .footer {
-        position: fixed;
-        bottom: 0;
         width: 100%;
         background-color: #d3d3d3;
         color: black;
@@ -43,9 +45,18 @@
         padding: 15px 0;
         box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
     }
+    /* Memastikan Footer Selalu di Bawah */
+    
+    html,
+    body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
     
     #content {
-        padding-bottom: 80px;
+        flex: 1;
+        /* Mengisi ruang kosong agar footer tetap di bawah */
     }
     /* Profile Section */
     
@@ -79,7 +90,7 @@
         font-size: 18px;
         font-weight: 300;
         margin-top: 15px;
-        text-align: left;
+        text-align: justify;
         line-height: 1.6;
     }
     
@@ -91,7 +102,7 @@
     /* Bio Section */
     
     .bio-section {
-        margin-top: 50px;
+        margin-top: 10px;
         padding: 40px 0;
         background-color: #1c1e2e;
         border-radius: 10px;
@@ -108,38 +119,123 @@
         font-size: 18px;
         font-weight: 300;
         line-height: 1.8;
-        text-align: left;
+        text-align: justify;
     }
     /* Skills Section */
     
     .skills-section {
-        margin-top: 50px;
-        text-align: center;
+        margin-top: 10px;
+        padding: 40px 0;
     }
     
-    .skill-card {
+    .skills-card {
         background-color: #3b3d56;
         padding: 20px;
         border-radius: 10px;
-        text-align: left;
         color: white;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s ease;
     }
     
-    .skill-card h3 {
+    .skills-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .skills-card h3 {
         font-size: 22px;
         font-weight: bold;
+        margin-bottom: 10px;
+    }
+    /* Bullet List Kiri-Kanan */
+    
+    .skills-container {
+        display: flex;
+        justify-content: space-between;
     }
     
-    .skill-card p {
+    .skills-list {
+        width: 48%;
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+    
+    .skills-list li {
         font-size: 16px;
-        font-weight: 300;
-        margin-top: 10px;
-        line-height: 1.5;
+        font-weight: 400;
+        color: #ddd;
+        line-height: 1.6;
+    }
+    /* Soft Skills Tetap dalam Satu Kolom */
+    
+    .skills-card ul {
+        padding-left: 20px;
+        margin: 5px 0;
     }
     
-    .skill-card:hover {
+    .skills-card ul li {
+        font-size: 16px;
+        font-weight: 400;
+        color: #ddd;
+        line-height: 1.6;
+    }
+    /* Education Section */
+    
+    .education-section {
+        margin-top: 10px;
+        padding: 40px 0;
+    }
+    
+    .education-card {
+        background-color: #3b3d56;
+        /* Warna Card */
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+    
+    .education-card:hover {
         transform: translateY(-5px);
+    }
+    /* Header dalam Card */
+    
+    .education-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .education-header h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+    }
+    
+    .education-date {
+        font-size: 16px;
+        font-weight: 400;
+        color: #ffd700;
+        /* Warna emas agar elegan */
+    }
+    /* Detail Pendidikan */
+    
+    .education-card p {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 5px 0;
+    }
+    
+    .education-card ul {
+        padding-left: 20px;
+        margin: 5px 0;
+    }
+    
+    .education-card ul li {
+        font-size: 16px;
+        font-weight: 400;
+        color: #ddd;
     }
     /* Responsiveness */
     
@@ -148,12 +244,32 @@
             text-align: center;
         }
         .profile-info {
-            text-align: center;
+            text-align: left;
         }
         .bio-text {
+            text-align: justify;
+        }
+        .education-card {
+            background-color: #3b3d56;
+            /* Warna Card */
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            text-align: left;
+        }
+        .education-date {
+            font-size: 16px;
+            font-weight: 400;
+            color: #ffd700;
+            text-align: left;
+        }
+        .skills-section {
             text-align: center;
         }
-        .skill-card {
-            text-align: center;
+        .skills-card {
+            text-align: left;
+            margin-bottom: 20px;
         }
     }
