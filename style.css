@@ -38,12 +38,59 @@
     }
     
     .footer {
-        width: 100%;
-        background-color: #d3d3d3;
-        color: black;
+        background-color: #2b2d42;
+        color: white;
+        padding: 40px 0;
         text-align: center;
-        padding: 15px 0;
-        box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: auto;
+    }
+    /* Style untuk setiap kolom dalam footer */
+    
+    .footer-about,
+    .footer-contact,
+    .footer-social {
+        flex: 1;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    .footer h4 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #ffd700;
+    }
+    
+    .footer p {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+    /* Ikon Sosial Media */
+    
+    .footer-social a {
+        font-size: 24px;
+        color: white;
+        margin: 0 10px;
+        transition: color 0.3s;
+    }
+    
+    .footer-social a:hover {
+        color: #ff6600;
+    }
+    /* Footer Bottom */
+    
+    .footer-bottom {
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 1px solid #555;
+        font-size: 14px;
     }
     /* Memastikan Footer Selalu di Bawah */
     
@@ -271,5 +318,14 @@
         .skills-card {
             text-align: left;
             margin-bottom: 20px;
+        }
+        .footer .container {
+            flex-direction: column;
+            text-align: center;
+        }
+        .footer-about,
+        .footer-contact,
+        .footer-social {
+            text-align: center;
         }
     }
