@@ -32,78 +32,116 @@
     .navbar a:hover {
         color: #ff6600 !important;
     }
-    
-    #content {
-        padding-bottom: 80px;
-    }
+    /* Footer Styling */
     
     .footer {
-        background-color: #2b2d42;
+        background-color: #3b3d56;
         color: white;
-        padding: 40px 0;
         text-align: center;
+        padding-top: 40px;
     }
+    /* Footer Container */
     
     .footer .container {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
         max-width: 1000px;
         margin: auto;
     }
-    /* Style untuk setiap kolom dalam footer */
+    /* Bagian Contact dan Sosial Media */
     
-    .footer-about,
     .footer-contact,
     .footer-social {
-        flex: 1;
-        padding: 10px;
-        text-align: left;
+        width: 50%;
+        text-align: center;
+        /* Menyamakan posisi */
     }
+    /* Kontak */
     
-    .footer h4 {
+    .footer-contact h4 {
         font-size: 20px;
         font-weight: bold;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         color: #ffd700;
     }
     
-    .footer p {
+    .footer-social h4 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 15px;
+        color: #ffd700;
+    }
+    
+    .footer-contact p {
         font-size: 16px;
         margin: 5px 0;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        /* Posisi ikon sejajar */
+        gap: 10px;
     }
-    /* Ikon Sosial Media */
+    /* Sosial Media */
     
-    .footer-social a {
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    /* Ukuran Ikon Sosial Media */
+    
+    .social-icons a {
         font-size: 24px;
         color: white;
-        margin: 0 10px;
-        transition: color 0.3s;
+        padding: 12px;
+        border-radius: 50%;
+        transition: 0.3s ease-in-out;
+        width: 50px;
+        /* Ukuran Lebih Seragam */
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+    /* Warna Brand Ikon Sosial Media */
+    
+    .social-icons .fa-linkedin {
+        background-color: #0077b5;
     }
     
-    .footer-social a:hover {
-        color: #ff6600;
+    .social-icons .fa-github {
+        background-color: #333;
     }
-    /* Footer Bottom */
+    /* Hover Effect */
+    
+    .social-icons a:hover {
+        opacity: 0.8;
+    }
+    /* Copyright */
     
     .footer-bottom {
-        margin-top: 20px;
-        padding-top: 10px;
-        border-top: 1px solid #555;
+        width: 100%;
+        background-color: #2a2c3e;
+        padding: 10px 0;
+        text-align: center;
         font-size: 14px;
+        border-top: 1px solid #555;
+        margin-top: 10px;
     }
-    /* Memastikan Footer Selalu di Bawah */
+    /* Pastikan Footer Menempel di Bawah */
     
     html,
     body {
         height: 100%;
+        margin: 0;
+        padding: 0;
         display: flex;
         flex-direction: column;
     }
     
     #content {
         flex: 1;
-        /* Mengisi ruang kosong agar footer tetap di bawah */
+        padding-bottom: 80px;
     }
     /* Profile Section */
     
@@ -284,6 +322,91 @@
         font-weight: 400;
         color: #ddd;
     }
+    /* Experience Section */
+    
+    #experience {
+        background-color: #1c1e2e;
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+    }
+    
+    .experience-container {
+        max-width: 1000px;
+        margin: auto;
+    }
+    /* Title */
+    
+    .section-title {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align: left;
+        color: #ffd700;
+    }
+    /* Experience Card */
+    
+    .experience-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .experience-card {
+        background-color: #3b3d56;
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+        text-align: left;
+    }
+    
+    .experience-card:hover {
+        transform: translateY(-5px);
+    }
+    /* Experience Header */
+    
+    .experience-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .experience-header h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+    }
+    
+    .experience-date {
+        font-size: 16px;
+        font-weight: 400;
+        color: #ffd700;
+    }
+    /* Experience Details */
+    
+    .experience-company {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .experience-details {
+        padding-left: 20px;
+        margin: 5px 0;
+    }
+    
+    .experience-details li {
+        font-size: 16px;
+        font-weight: 400;
+        color: #ddd;
+        margin-bottom: 5px;
+    }
     /* Responsiveness */
     
     @media (max-width: 768px) {
@@ -321,11 +444,17 @@
         }
         .footer .container {
             flex-direction: column;
-            text-align: center;
+            text-align: left;
         }
-        .footer-about,
         .footer-contact,
         .footer-social {
-            text-align: center;
+            text-align: left;
+        }
+        .social-icons {
+            justify-content: center;
+        }
+        .experience-card {
+            text-align: left;
+            padding: 15px;
         }
     }
