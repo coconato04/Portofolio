@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    background-color: #f8f9fa;
+    color: black;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #d3d3d3;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.navbar a {
+    color: black !important;
+    font-size: 18px;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #ff6600 !important;
+}
+
+
+/* Footer Styling */
+
+.footer {
+    background-color: #3b3d56;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+}
+
+
+/* Footer Container */
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+/* Bagian Contact dan Sosial Media */
+
+.footer-contact,
+.footer-social {
+    width: 50%;
+    text-align: center;
+    /* Menyamakan posisi */
+}
+
+
+/* Kontak */
+
+.footer-contact h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+    color: #ffd700;
+}
+
+.footer-social h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #ffd700;
+}
+
+.footer-contact p {
+    font-size: 16px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    /* Posisi ikon sejajar */
+    gap: 10px;
+}
+
+
+/* Sosial Media */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+
+/* Ukuran Ikon Sosial Media */
+
+.social-icons a {
+    font-size: 24px;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+    width: 50px;
+    /* Ukuran Lebih Seragam */
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Warna Brand Ikon Sosial Media */
+
+.social-icons .fa-linkedin {
+    background-color: #0077b5;
+}
+
+.social-icons .fa-github {
+    background-color: #333;
+}
+
+
+/* Hover Effect */
+
+.social-icons a:hover {
+    opacity: 0.8;
+}
+
+
+/* Copyright */
+
+.footer-bottom {
+    width: 100%;
+    background-color: #2a2c3e;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #555;
+    margin-top: 10px;
+}
+
+
+/* Pastikan Footer Menempel di Bawah */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    flex: 1;
+    padding-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        text-align: left;
+    }
+    .footer-contact,
+    .footer-social {
+        text-align: left;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+}
