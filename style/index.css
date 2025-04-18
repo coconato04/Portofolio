@@ -193,7 +193,6 @@ body {
         flex-direction: row;
         justify-content: flex-start;
         overflow-x: auto;
-        white-space: nowrap;
         max-width: 100%;
     }
     /* Navbar items yang bisa digeser */
@@ -201,21 +200,6 @@ body {
         margin-bottom: 10px;
         flex-shrink: 0;
         margin-right: 5px;
-    }
-    /* Styling untuk scrollbar (WebKit - Chrome, Safari) */
-    .navbar-nav::-webkit-scrollbar {
-        width: 0px;
-        /* Lebar scrollbar 0px membuatnya transparan */
-        height: 0px;
-        /* Tinggi scrollbar 0px jika vertikal */
-    }
-    .navbar-nav::-webkit-scrollbar-thumb {
-        background: transparent;
-        /* Warna thumb transparan */
-    }
-    .navbar-nav::-webkit-scrollbar-track {
-        background: transparent;
-        /* Warna track transparan */
     }
     .navbar-collapse {
         display: flex;
