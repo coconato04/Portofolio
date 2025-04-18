@@ -193,7 +193,6 @@ body {
         flex-direction: row;
         justify-content: flex-start;
         overflow-x: scroll;
-        overflow-x: hidden;
         white-space: nowrap;
         max-width: 100%;
     }
