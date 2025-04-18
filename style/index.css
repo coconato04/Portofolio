@@ -8,18 +8,28 @@ body {
 
 .navbar {
     width: 100%;
-    background-color: #3b3d56;
+    background-color: #1b1b1b;
     padding: 15px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar-nav {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    margin-left: auto;
+    overflow-x: auto;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white!important;
+    font-size: 18px;
+    transition: color 0.3s;
+    text-decoration: none;
 }
 
 .navbar a {
@@ -29,8 +39,33 @@ body {
     text-decoration: none;
 }
 
+.navbar .navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-right: 130px;
+}
+
 .navbar a:hover {
     color: #ffd700 !important;
+}
+
+.btn-success {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+.btn-success:hover {
+    background-color: transparent;
+    color: white;
+    border-color: #ffd700;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: flex-end;
+    /* Menjaga tombol di sisi kanan */
+    gap: 10px;
 }
 
 
@@ -111,21 +146,9 @@ body {
     border-radius: 50%;
     transition: 0.3s ease-in-out;
     width: 50px;
-    /* Ukuran Lebih Seragam */
     height: 50px;
     align-items: center;
     justify-content: center;
-}
-
-
-/* Warna Brand Ikon Sosial Media */
-
-.social-icons .fa-linkedin {
-    background-color: #0077b5;
-}
-
-.social-icons .fa-github {
-    background-color: #333;
 }
 
 
@@ -166,6 +189,41 @@ body {
 }
 
 @media (max-width: 768px) {
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+        max-width: 100%;
+        overflow-x: scroll;
+    }
+    /* Navbar items yang bisa digeser */
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+        flex-shrink: 0;
+        margin-right: 20px;
+    }
+    /* .navbar-toggler {
+        display: none;
+    } */
+    .navbar-collapse {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    /* Navbar toggle (hamburger) */
+    .d-flex {
+        position: absolute;
+        top: 26px;
+        right: 15px;
+        z-index: 99;
+    }
+    /* Navbar brand still centered */
+    .navbar .navbar-brand {
+        padding-right: 0px;
+        text-align: center;
+    }
     .footer .container {
         flex-direction: column;
         text-align: left;

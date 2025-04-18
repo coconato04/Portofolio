@@ -13,21 +13,48 @@
     <link rel="stylesheet" href="style/profile.css">
     <link rel="stylesheet" href="style/work.css">
     <link rel="stylesheet" href="style/project.css">
-    <!-- File CSS terpisah -->
 </head>
 
 <body onload="loadPage('profile.html')">
     <div class="background-animation"></div>
-    <nav class="navbar">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('profile.html')">Profile</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('Work_Experience.html')">Work Experience</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('Project_Experience.html')">Project Experience</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('certificates.html')">Certificates</a></li>
-        </ul>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Logo and brand, enlarged font -->
+            <a class="navbar-brand" onclick="loadPage('profile.html')">Portfolio</a>
+
+            <!-- Navbar toggle button for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse show" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('profile.html')">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('Work_Experience.html')">Work Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('Project_Experience.html')">Project Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('certificates.html')">Certificates</a></li>
+                </ul>
+
+                <!-- Social Media & Contact Button on the right -->
+                <div class="d-flex">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-transparent me-2">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-transparent me-2">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:your.email@example.com" class="btn btn-success">
+                        <i class="far fa-envelope"></i> Contact
+                    </a>
+                </div>
+            </div>
+        </div>
     </nav>
 
-    <!-- Konten akan di-load di sini -->
+    <!-- Content -->
     <div id="content" class="container mt-4"></div>
 
     <!-- Footer -->
@@ -64,7 +91,6 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-    <!-- JavaScript file terpisah -->
 </body>
 
 </html>
