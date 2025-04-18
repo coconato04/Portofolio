@@ -193,7 +193,7 @@ body {
         flex-direction: row;
         justify-content: flex-start;
         overflow-x: scroll;
-        overflow-x: auto;
+        overflow-x: hidden;
         white-space: nowrap;
         max-width: 100%;
     }
@@ -201,7 +201,7 @@ body {
     .navbar-nav .nav-item {
         margin-bottom: 10px;
         flex-shrink: 0;
-        margin-right: 20px;
+        margin-right: 5px;
     }
     /* .navbar-toggler {
         display: none;
