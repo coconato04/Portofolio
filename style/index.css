@@ -188,15 +188,15 @@ body {
     padding-bottom: 80px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 268px) and (max-width: 1024px) {
     .navbar-nav {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        overflow-x: scroll;
         overflow-x: auto;
         white-space: nowrap;
         max-width: 100%;
-        overflow-x: scroll;
     }
     /* Navbar items yang bisa digeser */
     .navbar-nav .nav-item {
