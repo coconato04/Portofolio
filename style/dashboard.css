@@ -7,6 +7,7 @@
     overflow: hidden;
     display: flex;
     align-items: center;
+    background-image: url('../asset/photo/opening.png');
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain;
