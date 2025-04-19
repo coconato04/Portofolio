@@ -9,3 +9,7 @@ window.addEventListener('scroll', function() {
         document.body.classList.remove('scrolled');
     }
 });
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('dragstart', e => e.preventDefault());
