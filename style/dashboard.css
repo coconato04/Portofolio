@@ -119,29 +119,6 @@
     object-position: center top;
 }
 
-
-/* About me card */
-
-.bio-section .section-title {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #ffd700;
-    text-align: center;
-}
-
-.bio-card {
-    background-color: #2a2a2a;
-    border-radius: 8px;
-}
-
-.bio-text {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    text-align: justify;
-}
-
 @keyframes textAnimation {
     from {
         opacity: 0;
@@ -175,21 +152,145 @@ body.scrolled .byline {
 }
 
 
+/* Divider Arrow */
+
+.section-divider {
+    background: none;
+    display: flex;
+    justify-content: center;
+    margin: -4px 0;
+    /* sedikit overlap */
+}
+
+.divider-arrow {
+    background-color: #1b1b1b;
+    color: #ffd700;
+    padding: 0.5rem 2rem;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* Animasi Slide-In dari kanan */
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Animasi Fade-In */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Trigger animasi profile */
+
+.animate-profile .col-md-5 {
+    opacity: 0;
+    animation: slideInRight 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.animate-profile .col-md-7 {
+    opacity: 0;
+    animation: slideInRight 1s ease-out forwards;
+    animation-delay: 0.8s;
+}
+
+
+/* Skills Section */
+
+.skills-section {
+    margin-top: 10px;
+    padding: 40px 0;
+}
+
+.skills-card {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.skills-card:hover {
+    transform: translateY(-5px);
+}
+
+.skills-card h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+/* Bullet List Kiri-Kanan */
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-list {
+    width: 48%;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.skills-list li {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+
+/* Soft Skills Tetap dalam Satu Kolom */
+
+.skills-card ul {
+    padding-left: 20px;
+    margin: 5px 0;
+}
+
+.skills-card ul li {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+
+/* CTA Explore */
+
+.btn-explore {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.btn-explore:hover {
+    color: #fff;
+}
+
+
 /* Responsive */
-
-
-/* @media (max-width: 995px) {
-    .hero-content {
-        max-width: 90%;
-        padding-left: 5%;
-    }
-    .welcome-text {
-        font-size: 2.8rem;
-    }
-    .byline {
-        font-size: 1.1rem;
-    }
-} */
 
 @media (min-width: 768px) and (max-width: 997px) {
     .hero-content {
@@ -201,5 +302,25 @@ body.scrolled .byline {
     }
     .byline {
         font-size: 1rem;
+    }
+    .profile-section .row.align-items-center {
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-section .col-md-5,
+    .profile-section .col-md-7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .profile-section .col-md-5 {
+        margin-bottom: 2rem;
+    }
+    .divider-arrow {
+        position: relative;
+        left: 0;
+    }
+    .btn-explore {
+        display: inline-block;
+        margin-left: auto;
     }
 }
