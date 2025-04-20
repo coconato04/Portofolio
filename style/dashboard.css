@@ -387,37 +387,6 @@
         font-size: 0.8rem;
         color: #ffd700;
     }
-    /* Buttons */
-    
-    .project-buttons {
-        display: flex;
-        gap: 0.75rem;
-    }
-    
-    .btn-code {
-        border: 1px solid #9ee8c0;
-        color: #9ee8c0;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        text-decoration: none;
-    }
-    
-    .btn-code:hover {
-        background: #9ee8c0;
-        color: #1b1b1b;
-    }
-    
-    .btn-demo {
-        background: #3ee8a0;
-        color: #1b1b1b;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        text-decoration: none;
-    }
-    
-    .btn-demo:hover {
-        background: #36c48a;
-    }
     /* Divider arrow (reuse dari atas) */
     
     .divider-arrow {
