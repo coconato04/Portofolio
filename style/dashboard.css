@@ -484,8 +484,6 @@
     img {
         pointer-events: none;
         -webkit-user-drag: none;
-        user-drag: none;
-        draggable: false;
     }
     
     .image-wrapper {
