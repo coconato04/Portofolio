@@ -30,3 +30,42 @@ function loadPage(page) {
         })
         .catch(console.error);
 }
+
+// 1. Fungsi deteksi DevTools (via perbedaan inner/outer size)
+function devtoolsOpen() {
+    return window.outerWidth - window.innerWidth > 160 ||
+        window.outerHeight - window.innerHeight > 160;
+}
+
+// 2. Acak string panjang
+function randomGibberish(length = 500) {
+    return Array.from({
+            length
+        })
+        .map(() => String.fromCharCode(33 + Math.random() * 94 | 0))
+        .join('');
+}
+
+// 3. Interval pengecekan DevTools
+let alerted = false;
+setInterval(() => {
+    if (devtoolsOpen() && !alerted) {
+        alerted = true;
+        // Gantikan seluruh isi halaman dengan teks acak
+        document.documentElement.innerHTML =
+            `<pre style="white-space: pre-wrap; color:#f00; padding:20px;">
+                ${randomGibberish(2000)}
+                </pre>`;
+    }
+}, 500);
+
+// 4. Blok shortcut inspect & copy source
+window.addEventListener('keydown', e => {
+    // F12, Ctrl+Shift+I/C/J, Ctrl+U
+    if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && ['I', 'C', 'J'].includes(e.key)) ||
+        (e.ctrlKey && e.key === 'u')
+    ) e.preventDefault();
+});
+window.addEventListener('contextmenu', e => e.preventDefault());
