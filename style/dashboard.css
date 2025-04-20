@@ -453,6 +453,7 @@
     img {
         pointer-events: none;
         -webkit-user-drag: none;
+        -webkit-user-select: none;
     }
     
     .image-wrapper {
@@ -490,6 +491,8 @@
     #content {
         max-width: 100%;
         padding: 0 !important;
+        user-select: text;
+        -webkit-user-select: text;
     }
     
     .certificate-card .cert-link {

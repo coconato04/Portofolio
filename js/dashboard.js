@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.addEventListener('contextmenu', e => e.preventDefault());
-document.addEventListener('copy', e => e.preventDefault());
-document.addEventListener('dragstart', e => e.preventDefault());
+// Hanya blok klik kanan pada gambar
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('contextmenu', e => e.preventDefault());
+});
