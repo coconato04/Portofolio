@@ -478,6 +478,20 @@
     }
     /* Responsive */
     
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    
+    .container-fluid,
+    .navbar,
+    #content {
+        max-width: 100%;
+        padding: 0 !important;
+    }
+    
     @media (min-width: 768px) and (max-width: 997px) {
         .hero-content {
             max-width: 90%;
