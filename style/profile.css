@@ -242,7 +242,7 @@
     /* 4. Center-kan teks intro & info list */
     .profile-intro,
     .profile-info {
-        text-align: center;
+        text-align: justify;
     }
     /* 5. Kecilkan font judul jika perlu */
     .profile-title {
@@ -261,7 +261,7 @@
         text-align: justify;
     }
     .education-card {
-        background-color: #3b3d56;
+        background-color: #2a2a2a;
         /* Warna Card */
         padding: 20px;
         border-radius: 10px;
